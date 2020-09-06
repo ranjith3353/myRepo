@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="main/database/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/main/database"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="hsqldb-2.2.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
