@@ -1,6 +1,6 @@
 package training.java_training;
 
-public class SampleClass {
+public class OverloadingExample {
 	
 	//overloading & overriding example
 	
@@ -32,7 +32,7 @@ public class SampleClass {
 	}
 	
 	public static void main(String[] args) {
-		SampleClass sampleClass = new SampleClass();
+		OverloadingExample sampleClass = new OverloadingExample();
 		int number = sampleClass.method("10");
 		System.out.println("Returned integer with string input" + number);
 		sampleClass.method('x'); //char will promote to int -> Automatic promotion in overlodaing
