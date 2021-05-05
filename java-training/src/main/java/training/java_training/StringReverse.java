@@ -4,7 +4,7 @@ public class StringReverse {
 
 	public static String BASEBALL = "baseball";
 
-	public static void method1() {
+	public static void reverse() {
 		char[] charArray = new char[10];
 		for (int i = 1; i <= BASEBALL.length(); i++) {
 			char charAt = BASEBALL.charAt(BASEBALL.length() - i);
@@ -25,7 +25,9 @@ public class StringReverse {
 	}
 
 	public static void main(String[] args) {
-		method1();
+		reverse();
 		printReverseOfAString(BASEBALL);
+		StringBuilder stringBuilder = new StringBuilder(BASEBALL);
+		System.out.println(stringBuilder.reverse());
 	}
 }

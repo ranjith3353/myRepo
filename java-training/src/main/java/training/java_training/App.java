@@ -23,6 +23,8 @@ public class App
 	
 	private static final String MAIN_CONTEXT_FILE_LOCATION = "META-INF/spring/application-context.xml";
 	
+	//int age = new int(); // This can't be created as int is a primitive data type.
+	
     public static void main( String... args ) throws Exception
     {
     	//Display main method arguments
