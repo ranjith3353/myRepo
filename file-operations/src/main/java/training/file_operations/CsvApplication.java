@@ -14,8 +14,8 @@ import training.file_operations.vo.CsvVo;
 public class CsvApplication {
 
 	public static void main(String[] args) throws IOException {
-		File csv1 = new File("C:/Users/lranjith/Desktop/file_input1.csv");
-		File csv2 = new File("C:/Users/lranjith/Desktop/file_input2.csv");
+		File csv1 = new File("src/main/resources/Dep.csv");
+		File csv2 = new File("src/main/resources/emp.csv");
 
 		List<String> csv1Headers = CsvParser.getHeadersFromACsv(csv1);
 
@@ -50,7 +50,7 @@ public class CsvApplication {
 		for (int i = 1; i <= allCsvRecords.size(); i++) {
 			for (CsvVo csvVo : allCsvRecords) {
 				for (Entry<String, String> entry : csvVo.getKeyVal().entrySet()) {
-					if(entry.getKey().equals("Employee_ID") && Integer.valueOf(entry.getValue()) == i) {
+					if(entry.getKey().equals("dep_id") && Integer.valueOf(entry.getValue()) == i) {
 						sortedCsvRecords.add(csvVo);
 					}
 				}
