@@ -10,6 +10,12 @@ import java.io.StringWriter;
 import org.apache.commons.io.IOUtils;
 
 public class ProjectUtils {
+	
+	public final static String JMS_QUEUE = "COM.JAVA_TRAINING.JMS.QUEUE";
+	
+	public final static String SENDER_QUEUE = "COM.JAVA_TRAINING.JMS.SENDER_QUEUE";
+	
+	public final static String RECEIVER_QUEUE = "COM.JAVA_TRAINING.JMS.RECEIVER_QUEUE";
 
 	public static String getFileAsString(String messageFilePath) throws IOException {
 		return IOUtils.toString(ClassLoader.getSystemResourceAsStream(messageFilePath));

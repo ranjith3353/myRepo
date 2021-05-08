@@ -57,7 +57,7 @@ public class CsvApplication {
 			}
 		}
 
-		CsvParser.writeToCsv(new File("C:/Users/lranjith/Desktop/file_output.csv"), uniqueHeaders, sortedCsvRecords);
+		CsvParser.writeToCsv(new File("src/main/resources/file_output.csv"), uniqueHeaders, sortedCsvRecords);
 		System.out.println("output file generated with records: \n" + sortedCsvRecords);
 	}
 
