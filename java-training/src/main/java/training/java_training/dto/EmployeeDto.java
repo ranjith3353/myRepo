@@ -4,9 +4,9 @@ public class EmployeeDto {
 
 	private int id;
 	private String name;
-	private float salary;
+	private int salary;
 	
-	public EmployeeDto(int id, String name, float salary) {
+	public EmployeeDto(int id, String name, int salary) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -33,7 +33,7 @@ public class EmployeeDto {
 		return salary;
 	}
 
-	public void setSalary(float salary) {
+	public void setSalary(int salary) {
 		this.salary = salary;
 	}
 

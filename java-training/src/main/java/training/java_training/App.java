@@ -69,7 +69,11 @@ public class App
         employeeDtos.add(e1);
         employeeDtos.add(e2);
         
+        //String employees = String.join(",", employeeDtos); use employeeNames instead of employee object
+        
         System.out.println("Is e1.equals(e2): "+ e1.equals(e2));
+        
+        /*employeeDtos.sort((EmployeeDto e1, EmployeeDto e2) -> e1.getSalary() - e2.getSalary()); */
         
         System.out.println("e1 hashcode: "+e1.hashCode());
         System.out.println("e2 hashcode: "+e2.hashCode());
