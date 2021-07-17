@@ -2,11 +2,14 @@
 -- Create Employee Table
 
 create table Employee(
-	employee_id int,
+	employee_id int primary key,
 	employee_name varchar(100),
 	employee_salary double,
 	dept_id int
 );
+
+-- drop table
+drop table employee;
 
 -- Create Department Table
 

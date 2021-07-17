@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import training.java_training.dto.EmployeeDto;
 import training.java_training.oops.Abstraction;
@@ -28,7 +29,7 @@ public class App
     public static void main( String... args ) throws Exception
     {
     	//Display main method arguments
-    	String conactArgs = "";
+    	/*String conactArgs = "";
     	for (String string : args) {
     		conactArgs = conactArgs.concat(" ").concat(string);
 		}
@@ -57,17 +58,21 @@ public class App
         StringBuffer sb = (StringBuffer) obj;
         System.out.println(sb);
         
-        /*String s = new String("Hello");
-        StringBuffer sb1 = (StringBuffer) s;*/ // this one will give us compilation error - cannot convert
-        
+        String s = new String("Hello");
+        StringBuffer sb1 = (StringBuffer) s; // this one will give us compilation error - cannot convert
+*/        
         System.out.println("===========================================================");
         
       //Equals Hashcode
         List<EmployeeDto> employeeDtos = new ArrayList<>();
-        EmployeeDto e1 = new EmployeeDto(102,"Amit",35000);
-        EmployeeDto e2 = new EmployeeDto(102,"Amit",35000);
+        EmployeeDto e1 = new EmployeeDto(101,"Amit",35000, 1);
+        EmployeeDto e2 = new EmployeeDto(102,"Amit",35000, 2);
+        EmployeeDto e3 = new EmployeeDto(103,"Amit",35000, 2);
+        EmployeeDto e4 = new EmployeeDto(104,"Amit",35000, 2);
         employeeDtos.add(e1);
         employeeDtos.add(e2);
+        employeeDtos.add(e3);
+        employeeDtos.add(e4);
         
         //String employees = String.join(",", employeeDtos); use employeeNames instead of employee object
         
@@ -83,12 +88,15 @@ public class App
         //Spring JDBC
         /*ApplicationContext ctx=new ClassPathXmlApplicationContext(MAIN_CONTEXT_FILE_LOCATION);  
         
-        JdbcOperations dao=(JdbcOperations)ctx.getBean("edao");  
-		int status=dao.saveEmployee(e1);  
-        System.out.println(status);*/
+        JdbcOperations dao=(JdbcOperations)ctx.getBean("edao");
+        dao.createTable();
+		int status=dao.saveEmployee(e3);  
+        System.out.println(status);
+        dao.saveEmployee(e4);
+        dao.printTableContents(ctx);
         
         System.out.println("===========================================================");
-        
+        */
         
     }
 }

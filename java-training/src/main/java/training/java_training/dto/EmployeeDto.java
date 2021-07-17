@@ -5,12 +5,14 @@ public class EmployeeDto {
 	private int id;
 	private String name;
 	private int salary;
+	private int deptId;
 	
-	public EmployeeDto(int id, String name, int salary) {
+	public EmployeeDto(int id, String name, int salary, int deptId) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
+		this.deptId = deptId;
 	}
 
 	public int getId() {
@@ -37,13 +39,22 @@ public class EmployeeDto {
 		this.salary = salary;
 	}
 
+	public int getDeptId() {
+		return deptId;
+	}
+
+	public void setDeptId(int deptId) {
+		this.deptId = deptId;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + deptId;
 		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + Float.floatToIntBits(salary);
+		result = prime * result + salary;
 		return result;
 	}
 
@@ -56,6 +67,8 @@ public class EmployeeDto {
 		if (getClass() != obj.getClass())
 			return false;
 		EmployeeDto other = (EmployeeDto) obj;
+		if (deptId != other.deptId)
+			return false;
 		if (id != other.id)
 			return false;
 		if (name == null) {
@@ -63,14 +76,14 @@ public class EmployeeDto {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (Float.floatToIntBits(salary) != Float.floatToIntBits(other.salary))
+		if (salary != other.salary)
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "EmployeeDto [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+		return "EmployeeDto [id=" + id + ", name=" + name + ", salary=" + salary + ", deptId=" + deptId + "]";
 	}
 
 }
