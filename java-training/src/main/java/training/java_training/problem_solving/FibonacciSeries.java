@@ -1,4 +1,4 @@
-package training.java_training.basic_examples;
+package training.java_training.problem_solving;
 
 import java.util.HashMap;
 import java.util.Map;
