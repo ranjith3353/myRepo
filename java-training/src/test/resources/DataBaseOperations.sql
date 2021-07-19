@@ -77,7 +77,7 @@ select * from employee right outer join department on department.dept_id = emplo
 select * from employee full outer join department on department.dept_id = employee.dept_id order by employee_id;
 
 -- self join
-select employee_name as E1, employee_name as E2, dept_id from employee E1, employee E2 where E1.dept_id <> E2.dept_id and E1.employee_salary = E2.employee_salary
+select employee_name as E1, employee_name as E2, dept_id, employee_salary from employee E1, employee E2 where E1.dept_id <> E2.dept_id and E1.employee_salary = E2.employee_salary
 order by E1.employee_salary;
 
 -- union
@@ -92,6 +92,11 @@ union all
 select dept_id from department
 order by dept_id;
 
+-- select top examples
+select TOP 3 * from employee;
+select * from employee limit 3;
+select * from employee fetch 4 rows only;
+-- SELECT TOP 50 PERCENT * FROM employee; some how not working
 
 
 
