@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class day1solution {
     public static final String INPUT_FILE = "D:\\Users\\lakumar\\Desktop\\GIT-Ranjith\\Advent-of-Code\\src\\year2021\\puzzle-1-input.txt";
-    public static Scanner reader= new Scanner(System.in);
     public static void main(String args[]){
         List<Integer> input = new ArrayList<Integer>();
         String s="";

@@ -1,4 +1,4 @@
-package dto;
+package dto.Y2021;
 
 public class Bingo {
 

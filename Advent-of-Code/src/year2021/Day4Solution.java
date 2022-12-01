@@ -1,10 +1,9 @@
 package year2021;
 
-import dto.Bingo;
+import dto.Y2021.Bingo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
